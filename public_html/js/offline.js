@@ -33,12 +33,36 @@ function displayDate( arrDate ){
 
 function displayChapters( arrChapters ){
 
-	var strHTML = '<dl>';
+	var elemContent = document.getElementById('content');
+
 	for( var i = 0, iLimit = arrChapters.length; i < iLimit; i++ ){
-		strHTML += '<dt>Chapter ' + i + '</dt><dd>' + arrChapters[i] + '</dd>';
+		elemContent.appendChild( generateChapterDiv( arrChapters[i] ) );
 	}
-	strHTML += '</dl>';
-	$('#content').append( strHTML );
+
+}
+
+function generateChapterDiv( skvChapter ){
+
+	var elemDiv = document.createElement('div');
+
+	// Append a h3 element
+	var elemH3 = document.createElement('h3');
+	elemH3.textContent = skvChapter.title;
+	elemDiv.appendChild(elemH3);
+
+	// Append an image element if it needs one
+	if( typeof skvChapter.blobImage === 'string' ){
+		elemImg = document.createElement('img');
+		elemImg.src = 'data:image/bmp;base64,' + skvChapter.blobImage;
+		elemDiv.appendChild(elemImg);
+	}
+
+	// Append a paragraph elemenet
+	var elemP = document.createElement('p');
+	elemP.textContent = skvChapter.text;
+	elemDiv.appendChild(elemP);
+
+	return elemDiv;
 }
 
 

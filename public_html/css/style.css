@@ -7,13 +7,8 @@ body{
 	color: #333;
 }
 
-dt{
-	font-size: 1.1em;
-	font-weight: bold;
-	margin-bottom: 0.5em;
+img{
+	width: 100%;
+	max-width: 300px;
 }
 
-dd{
-	color: #555;
-	margin-bottom: 2em;
-}
