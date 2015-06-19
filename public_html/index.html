@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html manifest="offline.appcache">
+<html manifest="manifest.appcache">
 	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+
+	
 		<title>Hello Offline World</title>
 
-		<link rel="stylesheet" type="text/css" href="/css/style.css" >
+		<!-- injector:css -->
+		<link rel="stylesheet" href="/css/76ef4965.style.min.css">
+		<!-- endinjector -->
 
 	</head>
 	<body>
@@ -14,7 +22,9 @@
 		
 		<script src="/js/localforage1.2.3.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="/js/offline.js?v=1"></script>
+		<!-- injector:js -->
+		<script src="/js/fdbf49d0.offline.min.js"></script>
+		<!-- endinjector -->
 
 	</body>
 </html>

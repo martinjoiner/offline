@@ -6,12 +6,9 @@ $.ajax({
 	dataType: "json"
 }).done(function( data ){
 
-	//displayDate( data.arrDate );
-	//displayChapters( data.arrChapters );
-
 	// AJAX succeeded, lets pass the data to the display functions 
-	localforage.setItem('arrDate', data.arrDate, function(err, value){ displayDate(value) } );
-	localforage.setItem('arrChapters', data.arrChapters, function(err, value){ displayChapters(value) } );
+	localforage.setItem('arrDate', data.arrDate, function(err, value){ displayDate(value); } );
+	localforage.setItem('arrChapters', data.arrChapters, function(err, value){ displayChapters(value); } );
 
 }).fail( function(){
 
@@ -36,11 +33,11 @@ function displayDate( arrDate ){
 
 function displayChapters( arrChapters ){
 
-	var strHTML = '<ul>';
+	var strHTML = '<dl>';
 	for( var i = 0, iLimit = arrChapters.length; i < iLimit; i++ ){
-		strHTML += '<li>' + arrChapters[i] + '</li>';
+		strHTML += '<dt>Chapter ' + i + '</dt><dd>' + arrChapters[i] + '</dd>';
 	}
-	strHTML += '</ul>';
+	strHTML += '</dl>';
 	$('#content').append( strHTML );
 }
 
@@ -50,7 +47,7 @@ function displayChapters( arrChapters ){
 window.addEventListener('load', function(e) {
 
 	window.applicationCache.addEventListener('updateready', function(e) {
-		if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+		if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
 			// Browser downloaded a new app cache.
 			if (confirm('A new version of this site is available. Load it?')) {
 				window.location.reload();
@@ -61,3 +58,4 @@ window.addEventListener('load', function(e) {
 	}, false);
 
 }, false);
+

@@ -1,3 +1,4 @@
 logs/*
 !logs/README.md
 
+node_modules

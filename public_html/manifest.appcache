@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# rev 20 - 2015-06-19T13:50:26.286Z
+
+CACHE:
+js/fdbf49d0.offline.min.js
+js/localforage1.2.3.js
+css/5cfe3882.style.min.css
+index.html
+favicon.ico
+http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+
+NETWORK:
+GET/latest/index.php
+*

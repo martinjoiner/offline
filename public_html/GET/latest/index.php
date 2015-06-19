@@ -18,7 +18,7 @@ $skvReturn['arrDate'][] = intval( date("s") ); // second
 
 $skvReturn['arrChapters'] = array();
 
-$iLimit = rand( 9, 24 );
+$iLimit = rand( 3, 9 );
 for( $i = 0; $i < $iLimit; $i++ ){
 	$skvReturn['arrChapters'][$i] = md5( $i . time() . $i );
 }
