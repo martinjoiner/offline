@@ -89,7 +89,8 @@ module.exports = function(grunt) {
         },
         network: [
           'GET/latest/index.php',
-          '*'
+          '*',
+          ''
         ]
         
       }
@@ -117,7 +118,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('css', ['clean:mincss','clean:revcss','cssmin','rev:css','injector:css', 'appcache']);
+  grunt.registerTask('css', ['clean:mincss', 'clean:revcss', 'cssmin', 'rev:css', 'injector:css', 'appcache']);
   grunt.registerTask('js', ['clean:revjs', 'jshint', 'uglify', 'rev:js', 'injector:js', 'appcache']);
 
 };

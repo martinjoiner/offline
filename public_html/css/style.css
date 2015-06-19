@@ -10,6 +10,7 @@ body{
 dt{
 	font-size: 1.1em;
 	font-weight: bold;
+	margin-bottom: 0.5em;
 }
 
 dd{
